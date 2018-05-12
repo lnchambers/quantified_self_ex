@@ -15,5 +15,6 @@ defmodule SelfQuantifiedEx.Api.Food do
     food
     |> cast(attrs, [:name, :calories])
     |> validate_required([:name, :calories])
+    |> unique_constraint(:name)
   end
 end

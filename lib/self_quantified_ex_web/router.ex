@@ -10,12 +10,14 @@ defmodule SelfQuantifiedExWeb.Router do
   end
 
   pipeline :api do
-    resources "/foods", FoodController, except: [:new, :edit]
     plug :accepts, ["json"]
   end
 
   # Other scopes may use custom stacks.
   scope "/api", SelfQuantifiedExWeb do
-    pipe_through :api
+    scope "/v1" do
+      pipe_through :api
+      resources "/foods", FoodController, except: [:new, :edit]
+    end
   end
 end

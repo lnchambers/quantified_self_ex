@@ -33,7 +33,7 @@ defmodule SelfQuantifiedExWeb.FoodControllerTest do
       assert json_response(conn, 200)["data"] == %{
         "id" => id,
         "calories" => 42,
-        "name" => "some name"}
+        "name" => "Pakawagalaga's Pawpaws"}
     end
 
     test "renders errors when data is invalid", %{conn: conn} do
@@ -52,8 +52,8 @@ defmodule SelfQuantifiedExWeb.FoodControllerTest do
       conn = get conn, food_path(conn, :show, id)
       assert json_response(conn, 200)["data"] == %{
         "id" => id,
-        "calories" => 43,
-        "name" => "some updated name"}
+        "calories" => 420,
+        "name" => "Opakawagalaga's Pawpaws"}
     end
 
     test "renders errors when data is invalid", %{conn: conn, food: food} do
