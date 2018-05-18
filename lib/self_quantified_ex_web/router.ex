@@ -18,6 +18,10 @@ defmodule SelfQuantifiedExWeb.Router do
     scope "/v1" do
       pipe_through :api
       resources "/foods", FoodController, except: [:new, :edit]
+      resources "/meals", MealController, only: [:index]
+      get "/meals/:id/foods", MealController, :show
+      post "/meals/:meal_id/foods/:food_id", MealController, :create
+      delete "/meals/:meal_id/foods/:food_id", MealController, :delete
     end
   end
 end
