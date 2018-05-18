@@ -1,4 +1,4 @@
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/lnchambers/quantified_self_js.svg?columns=all)](https://waffle.io/lnchambers/quantified_self_js)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/lnchambers/quantified_self_js.svg?columns=all)](https://waffle.io/lnchambers/quantified_self_ex)
 
 # README
 
@@ -46,4 +46,3 @@ This API is designed to interact with the Quantified Self front end located [her
 `DELETE /api/v1/meals/:meal_id/foods/:id`
 
   -Removes a food that belongs to the meal id
-  
